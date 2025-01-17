@@ -19,7 +19,7 @@ Route::get('/fuck', function () {
 
 Route::get('/fuck', [MyWorkController::class, 'FUCK']);
 Route::get('/color', [ColorController::class, 'color']);
-/* Route::get('/friend', [FriendsController::class, 'friend']); */
+Route::get('/friend', [FriendsController::class, 'friend']);
 Route::get('/friend/createDummies', [FriendsController_example::class, 'createDummies']);
 Route::get('/friend/update', [FriendsController::class, 'update']);
 Route::get('/friend/delete', [FriendsController::class, 'delete']);

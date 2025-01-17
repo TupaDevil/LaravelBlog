@@ -29,6 +29,8 @@ class FriendsController_example extends Controller
                 'age' => '20',
                 'alive' => '1',
                 'prefered_weapon' => 'various',
+                'weapon_id' => '1',
+                'sex_id' => '1',
             ],
             [
                 'name' => 'Oleg',
@@ -36,6 +38,8 @@ class FriendsController_example extends Controller
                 'age' => '18',
                 'alive' => '1',
                 'prefered_weapon' => 'fist',
+                'weapon_id' => '3',
+                'sex_id' => '2',
             ],
             [
                 'name' => 'cat',
@@ -43,6 +47,8 @@ class FriendsController_example extends Controller
                 'age' => '17',
                 'alive' => '1',
                 'prefered_weapon' => 'sword',
+                'weapon_id' => '3',
+                'sex_id' => '5',
             ],
             [
                 'name' => 'ilya',
@@ -50,6 +56,8 @@ class FriendsController_example extends Controller
                 'age' => '17',
                 'alive' => '1',
                 'prefered_weapon' => 'pistol',
+                'weapon_id' => '4',
+                'sex_id' => '4',
             ],
             [
                 'name' => 'satan',
@@ -57,6 +65,8 @@ class FriendsController_example extends Controller
                 'age' => '42',
                 'alive' => '1',
                 'prefered_weapon' => 'curse',
+                'weapon_id' => '5',
+                'sex_id' => '3',
             ],
         ];
 

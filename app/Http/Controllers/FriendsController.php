@@ -39,14 +39,14 @@ class FriendsController extends Controller
         //dd($weapons->normis);
         //dd($normis->weapons);
 
-        $friend = Friend::find(1);
-        dd($friend->perks);
+        // $friend = Friend::find(1);
+        // dd($friend->perks);
 
-        $Perks = Perk::find(1);
-        dd($Perks->friends);
+        // $Perks = Perk::find(1);
+        // dd($Perks->friends);
 
-        $weapons = Weapon::find(1);
-        dd($weapons->friends);
+        // $weapons = Weapon::find(1);
+        // dd($weapons->friends);
 
         $friends = Friend::all();
         return view('friends.index', compact('friends'));
@@ -88,7 +88,11 @@ class FriendsController extends Controller
 
     public function show(Friend $friend)
     {
-        return view('friends.show', compact('friend'));
+        $weapons = Weapon::all();
+        $sexes = Sex::all();
+
+        $perks = Perk::all();
+        return view('friends.show', compact('friend', 'weapons', 'sexes', 'perks'));
     }
 
     public function edit(Friend $friend)
