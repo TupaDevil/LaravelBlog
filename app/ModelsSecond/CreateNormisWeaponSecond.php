@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CreateFriendPerk extends Model
+class CreateNormisWeaponSecond extends Model
 {
     use HasFactory;
-    protected $table = 'friend_perk';
+    protected $table = 'normis_weapon';
     protected $guarded = []; 
 }

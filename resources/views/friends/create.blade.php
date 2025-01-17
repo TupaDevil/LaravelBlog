@@ -63,14 +63,14 @@
             </select>
             
             <!-- Просто попытка сделать checkbox -->
-            <!-- @foreach ($perks as $perk)
+            @foreach ($perks as $perk)
                 <div class="form-check" id="perks" name="perks[]">
                     <input class="form-check-input" type="checkbox" value="{{ $perk->id }}" id="perks">
                     <label class="form-check-label" for="flexCheckDefault">
                         {{ $perk->perk}}
                     </label>
                 </div>
-            @endforeach -->
+            @endforeach
 
             <!-- метод тыка возможно рабочий 1 (нихуя не рабочий) -->
             <!-- <div class="form-check" multiple aria-label="multiple select" id="perks" name="perks[]">

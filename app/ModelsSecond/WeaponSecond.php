@@ -6,14 +6,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Normis extends Model
+class WeaponSecond extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $table = 'normis';
+    protected $table = 'weapons';
     protected $guarded = []; 
 
-    public function weapons () {
-        return $this -> belongsToManyMany(Weapon::class);
+    public function friends () {
+        return $this -> hasMany(Friend::class);
+    }
+
+    public function normis () {
+        return $this -> belongsToManyMany(Normis::class);
     }
 }

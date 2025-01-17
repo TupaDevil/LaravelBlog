@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Weapon_example extends Model
+class Weapon extends Model
 {
     use HasFactory;
     use SoftDeletes;
@@ -14,11 +14,11 @@ class Weapon_example extends Model
     protected $guarded = []; 
 
     public function friends() {
-        return $this->hasMany(Friend_example::class, 'weapon_id', 'id' );
+        return $this->hasMany(Friend::class, 'weapon_id', 'id' );
     }
 
     public function normis() {
-        return $this->belongsToMany(Normis_example::class, 'normis_weapons', 'weapon_id', relatedPivotKey: 'normis_id' );
+        return $this->belongsToMany(Normis::class, 'normis_weapons', 'weapon_id', relatedPivotKey: 'normis_id' );
     }
 
 }
