@@ -1,0 +1,4 @@
+Нужно короче сделать папку Model_Second и Migrations_example
+А потом Model_Second и Migrations_Second
+
+Сейчас оно работает на нормальном движке и в котроллере надо будет поменять модели
