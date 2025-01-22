@@ -13,11 +13,12 @@ class Weapon extends Model
     protected $table = 'weapons';
     protected $guarded = []; 
 
-    public function friends () {
-        return $this -> hasMany(Friend::class);
+    public function friends() {
+        return $this->hasMany(Friend::class, 'weapon_id', 'id' );
     }
 
-    public function normis () {
-        return $this -> belongsToManyMany(Normis::class);
+    public function normis() {
+        return $this->belongsToMany(Normis::class, 'normis_weapons', 'weapon_id', relatedPivotKey: 'normis_id' );
     }
+
 }

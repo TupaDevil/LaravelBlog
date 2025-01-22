@@ -8,8 +8,8 @@ use App\Models\Weapon;
 use App\Models\sex;
 use App\Models\Perk;
 use App\Models\Normis;
-use App\Models\CreateNormisWeapon;
-use App\Models\CreateFriendPerk;
+use App\Models\NormisWeapon;
+use App\Models\FriendPerk;
 
 class FriendsController_example extends Controller
 {
@@ -199,7 +199,7 @@ class FriendsController_example extends Controller
 
         foreach ($NormisWeaponArr as $item) {
             dump($item);
-            CreateNormisWeapon::create($item);
+            NormisWeapon::create($item);
         }
 
         $FriendPerkArr = [
@@ -237,7 +237,7 @@ class FriendsController_example extends Controller
 
         foreach ($FriendPerkArr as $item) {
             dump($item);
-            CreateFriendPerk::create($item);
+            FriendPerk::create($item);
         }
 
 
