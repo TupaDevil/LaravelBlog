@@ -22,59 +22,6 @@ class FriendsController_example extends Controller
 
     public function createDummies()
     {
-        $friendsArr = [
-            [
-                'name' => 'Yan',
-                'nick_name' => 'Yanello',
-                'age' => '20',
-                'alive' => '1',
-                'prefered_weapon' => 'various',
-                'weapon_id' => '1',
-                'sex_id' => '1',
-            ],
-            [
-                'name' => 'Oleg',
-                'nick_name' => 'Ayleh',
-                'age' => '18',
-                'alive' => '1',
-                'prefered_weapon' => 'fist',
-                'weapon_id' => '3',
-                'sex_id' => '2',
-            ],
-            [
-                'name' => 'cat',
-                'nick_name' => 'meow',
-                'age' => '17',
-                'alive' => '1',
-                'prefered_weapon' => 'sword',
-                'weapon_id' => '3',
-                'sex_id' => '5',
-            ],
-            [
-                'name' => 'ilya',
-                'nick_name' => 'iltention',
-                'age' => '17',
-                'alive' => '1',
-                'prefered_weapon' => 'pistol',
-                'weapon_id' => '4',
-                'sex_id' => '4',
-            ],
-            [
-                'name' => 'satan',
-                'nick_name' => 'femboy',
-                'age' => '42',
-                'alive' => '1',
-                'prefered_weapon' => 'curse',
-                'weapon_id' => '5',
-                'sex_id' => '3',
-            ],
-        ];
-
-
-        foreach ($friendsArr as $item) {
-            dump($item);
-            Friend::create($item);
-        }
 
 
         $weaponsArr = [
@@ -202,6 +149,61 @@ class FriendsController_example extends Controller
             NormisWeapon::create($item);
         }
 
+
+        $friendsArr = [
+            [
+                'name' => 'Yan',
+                'nick_name' => 'Yanello',
+                'age' => '20',
+                'alive' => '1',
+                'prefered_weapon' => 'various',
+                'weapon_id' => '1',
+                'sex_id' => '1',
+            ],
+            [
+                'name' => 'Oleg',
+                'nick_name' => 'Ayleh',
+                'age' => '18',
+                'alive' => '1',
+                'prefered_weapon' => 'fist',
+                'weapon_id' => '3',
+                'sex_id' => '2',
+            ],
+            [
+                'name' => 'cat',
+                'nick_name' => 'meow',
+                'age' => '17',
+                'alive' => '1',
+                'prefered_weapon' => 'sword',
+                'weapon_id' => '3',
+                'sex_id' => '5',
+            ],
+            [
+                'name' => 'ilya',
+                'nick_name' => 'iltention',
+                'age' => '17',
+                'alive' => '1',
+                'prefered_weapon' => 'pistol',
+                'weapon_id' => '4',
+                'sex_id' => '4',
+            ],
+            [
+                'name' => 'satan',
+                'nick_name' => 'femboy',
+                'age' => '42',
+                'alive' => '1',
+                'prefered_weapon' => 'curse',
+                'weapon_id' => '5',
+                'sex_id' => '3',
+            ],
+        ];
+
+
+        foreach ($friendsArr as $item) {
+            dump($item);
+            Friend::create($item);
+        }
+
         $FriendPerkArr = [
             [
                 'friend_id' => '1','perk_id' => '1',
@@ -239,7 +241,6 @@ class FriendsController_example extends Controller
             dump($item);
             FriendPerk::create($item);
         }
-
 
         dd('created');
     }
