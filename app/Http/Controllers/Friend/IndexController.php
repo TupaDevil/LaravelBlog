@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Friend;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\friend;
 
 class IndexController extends Controller
