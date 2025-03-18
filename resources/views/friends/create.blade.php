@@ -86,7 +86,7 @@
 
 
             <div class="form-group">
-                <button type="sumbit" class="btn btn-block create-account">Create Friend</button>
+                <button type="submit" class="btn btn-block create-account">Create Friend</button>
             </div>
             
         </form>

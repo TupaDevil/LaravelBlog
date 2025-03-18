@@ -13,7 +13,6 @@ class EditController extends Controller
     public function __invoke(Friend $friend){
         $weapons = Weapon::all();
         $sexes = Sex::all();
-
         $perks = Perk::all();
         return view('friends.edit', compact('friend', 'weapons', 'sexes', 'perks'));
     }
