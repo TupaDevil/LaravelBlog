@@ -31,17 +31,8 @@ Route::get('/friend/createDummies', [FriendsController_example::class, 'createDu
     Route::get('/friend/{friend}/edit', [FriendsController::class, 'edit'])-> name('friend.edit');
     Route::patch('/friend/{friend}', [FriendsController::class, 'update'])-> name('friend.update');
     Route::delete('/friend/{friend}', [FriendsController::class, 'delete'])-> name('friend.delete'); */
-    
 
-/*     Route::get('/friend', IndexController::class)->name('friend.index');
-        Route::get('/friend/create', CreateController::class)->name('friend.create');
-        Route::post('/friend', StoreController::class)->name('friend.store');
-        Route::get('/friend/{friend}', ShowController::class)->name('friend.show');
-        Route::get('/friend/{friend}/edit', EditController::class)->name('friend.edit');
-        Route::patch('/friend/{friend}', UpdateController::class)->name('friend.update');
-        Route::delete('/friend/{friend}', DeleteController::class)->name('friend.delete'); */
-
-    Route::namespace('App\Http\Controllers\Friend')->prefix('friend')->group(function () {
+    Route::prefix('friend')->group(function () {
         Route::get('/', IndexController::class)->name('friend.index');
         Route::get('/create', CreateController::class)->name('friend.create');
         Route::post('/', StoreController::class)->name('friend.store');

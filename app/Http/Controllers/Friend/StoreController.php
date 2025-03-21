@@ -1,24 +1,18 @@
 <?php
 
 namespace App\Http\Controllers\Friend;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Friend\BaseController;
 use App\Http\Requests\Friend\StoreRequest;
-use App\Models\friend;
+use App\Models\Friend;
 
-class StoreController extends Controller
+class StoreController extends BaseController
 {
 
     public function __invoke(StoreRequest $request){
         $data = $request->validated(); 
-        $perks = $data['perks'] ?? []; // [1, 2, 3] или пустой массив
-        unset($data['perks']);
-        
-        $friend = Friend::create($data);
-        $friend->perks()->attach($perks, ['created_at' => now()]);
-
+        $this -> service ->store($data);
 
         return redirect()->route('friend.index');
-        /* return view('friends.store'); */
     }
 
 }

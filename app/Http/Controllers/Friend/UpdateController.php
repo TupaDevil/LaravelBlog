@@ -1,21 +1,18 @@
 <?php
 
 namespace App\Http\Controllers\Friend;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Friend\BaseController;
 use App\Http\Requests\Friend\UpdateRequest;
 use App\Models\friend;
 
-class UpdateController extends Controller
+class UpdateController extends BaseController
 {
 
-    public function __invoke(UpdateRequest $request,Friend $friend) {
+    public function __invoke(UpdateRequest $request, Friend $friend) {
         $data = $request->validated(); 
-        $perks = $data['perks'];
-        unset($data['perks']);
-        
-        $friend -> update($data);
-        $friend->perks()->sync($perks);
 
+        $this -> service ->update($friend, $data);
+    
         return redirect()->route('friend.show', $friend);
     }
 
